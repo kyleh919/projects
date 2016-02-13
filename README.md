@@ -9,3 +9,6 @@ http://stackoverflow.com/questions/12258399/how-to-create-folder-in-github-repos
 
 How to remove a folder in git
 http://stackoverflow.com/questions/6313126/how-to-remove-a-directory-in-my-github-repository
+
+How to remove .DS_Store + add .gitignore
+http://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository
