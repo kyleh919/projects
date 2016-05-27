@@ -12,3 +12,6 @@ http://stackoverflow.com/questions/6313126/how-to-remove-a-directory-in-my-githu
 
 How to remove .DS_Store + add .gitignore
 http://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository
+
+How to move files around in git
+https://githowto.com/moving_files
