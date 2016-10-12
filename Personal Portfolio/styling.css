@@ -1,0 +1,15 @@
+#navBar {
+    list-style-type: none;
+}
+
+.navBarLink {
+    display: inline;
+}
+
+#welcome {
+    background-color:green;
+}
+
+#aboutMe {
+    background-color:lightblue;
+}
