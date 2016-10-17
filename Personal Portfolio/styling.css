@@ -1,15 +1,31 @@
+body {
+    
+}
+
+div {
+    
+}
+
 #navBar {
-    list-style-type: none;
+  list-style-type: none;
+  background-color: green;
+  
 }
 
 .navBarLink {
-    display: inline;
+  display: inline;
+}
+
+.section {
+  height: 500px;
 }
 
 #welcome {
-    background-color:green;
+  background-color:#b3d9ff;
+  text-align: center;
 }
 
+
 #aboutMe {
-    background-color:lightblue;
+  background-color:#4da6ff;
 }
