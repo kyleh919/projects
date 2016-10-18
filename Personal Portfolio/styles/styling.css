@@ -7,17 +7,12 @@ div {
 }
 
 #navBar {
-  list-style-type: none;
-  background-color: green;
-  
+  margin-bottom: 0px;
 }
 
-.navBarLink {
-  display: inline;
-}
 
 .section {
-  height: 500px;
+  height: 700px;
 }
 
 #welcome {
@@ -25,6 +20,10 @@ div {
   text-align: center;
 }
 
+#welcome h1 {
+  margin: 225px 0px 0px 0px;
+  /*border: 5px solid gray;*/
+}
 
 #aboutMe {
   background-color:#4da6ff;
