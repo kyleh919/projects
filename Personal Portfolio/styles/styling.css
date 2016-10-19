@@ -1,5 +1,5 @@
 body {
-    
+  padding-top: 50px;
 }
 
 div {
@@ -9,7 +9,6 @@ div {
 #navBar {
   margin-bottom: 0px;
 }
-
 
 .section {
   height: 700px;
@@ -25,10 +24,18 @@ div {
   /*border: 5px solid gray;*/
 }
 
-#aboutMe {
+#background {
   background-color:#4da6ff;
 }
 
-#contactInfo {
+#aboutMe {
   background-color:#b3d9ff;
+}
+
+#aboutMeHeader {
+  margin-top: 50px;
+}
+
+#contactInfo {
+  background-color:#4da6ff;
 }
