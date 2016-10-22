@@ -10,6 +10,13 @@ div {
   margin-bottom: 0px;
 }
 
+#brand {
+  margin-top: 12px;
+  margin-right: 16px;
+  font-size: 18px;
+  color: #999999;
+}
+
 .section {
   height: 700px;
 }
