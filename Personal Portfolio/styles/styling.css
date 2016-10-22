@@ -43,7 +43,17 @@ div {
   background-color:#4da6ff;
 }
 
-#titleHeader {
+.titleHeader {
   text-align: center;
   padding-top: 50px;
 }
+
+
+
+
+/*#coltest1 {
+  border: 5px solid gray;
+}
+#coltest2 {
+  border: 5px solid deeppink;
+}*/
