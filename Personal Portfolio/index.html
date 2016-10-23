@@ -1,4 +1,3 @@
-
 <head>
     <title>Kyle A. Hunter</title>
     <meta charset="utf-8">
@@ -31,10 +30,10 @@
             
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#welcome">Welcome</a></li>
-                    <li><a href="#aboutMe">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contactInfo">Contact Info</a></li>
+                    <li><a href="#welcomeContainer">Welcome</a></li>
+                    <li><a href="#aboutMeContainer">About</a></li>
+                    <li><a href="#experienceContainer">Experience</a></li>
+                    <li><a href="#contactInfoContainer">Contact Info</a></li>
                 </ul>
             </div>
         </div>
@@ -42,17 +41,24 @@
 
     <div>
         <!--Welcome section-->
-        <div class="section container-fluid" id="welcome">
+        <div class="section container-fluid" id="welcomeContainer">
             <h1>Welcome!<br><br><br><br>Thank you for your interest in my portfolio.</h1>
         </div>
 
-        <div class="section container-fluid" id="aboutMe">
-            <h2 class="titleHeader">About Me</h2>
+        <!--About me section-->
+        <div class="section container-fluid" id="aboutMeContainer">
+            <h2 class="containerHeader">About Me</h2>
 
             
             
-            <div class="row">
-                <div class="col-sm-8" id="coltest1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="row" id="coltest1">
+                <div class="col-sm-8 aboutMe" id="coltest1">
+                    <p>Currently working at BAE Systems, Inc. as a software engineer. My passions include full stack development,
+                        user interfaces, product design, and seamless user experience. I love how user interfaces assist people in
+                        achieving goals and have an interest in the design process.
+                        I developed this portfolio to expand my skillset and gather experience in web development.
+                    </p>
+                </div>
                 <div class="col-sm-4" id="coltest2">
                     <img src="images/kyleGraduation.JPG" class="img-responsive img-rounded" alt="Headshot of Kyle">
                 </div>
@@ -62,15 +68,19 @@
 
         </div>
 
+        <!--Experience section-->
+        <div class="section container-fluid" id="experienceContainer">
+            <h1 class="containerHeader">Background and Experience</h1>
 
-
-        <!--About me section-->
-        <div class="section container-fluid" id="experience">
-            <h1 class="titleHeader">Background and Experience</h1>
-
-            <div class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-            <div class="col-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="col-sm-4">
+                <h3>Work Experience</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Education</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Skills</h3>
+            </div>
             
 
 
@@ -78,8 +88,8 @@
         </div>
 
         <!--Contact info section-->
-        <div class="section container-fluid" id="contactInfo">
-            <h1 class="titleHeader">Contact Info</h1>
+        <div class="section container-fluid" id="contactInfoContainer">
+            <h1 class="containerHeader">Contact Info</h1>
         </div>
     
     </div>

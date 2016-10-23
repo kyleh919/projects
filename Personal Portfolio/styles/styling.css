@@ -21,39 +21,45 @@ div {
   height: 700px;
 }
 
-#welcome {
-  background-color:#b3d9ff;
-  text-align: center;
-}
-
-#welcome h1 {
-  margin: 225px 0px 0px 0px;
-  /*border: 5px solid gray;*/
-}
-
-#aboutMe {
-  background-color:#4da6ff;
-}
-
-#experience {
-  background-color:#b3d9ff;
-}
-
-#contactInfo {
-  background-color:#4da6ff;
-}
-
-.titleHeader {
+.containerHeader {
   text-align: center;
   padding-top: 50px;
 }
 
+#welcomeContainer {
+  background-color:#b3d9ff;
+  text-align: center;
+}
+
+#welcomeContainer h1 {
+  margin: 225px 0px 0px 0px;
+  /*border: 5px solid gray;*/
+}
+
+#aboutMeContainer {
+  background-color:#4da6ff;
+}
+
+.aboutMe {
+  margin: 225px 0px 0px 0px;
+}
+
+#experienceContainer {
+  background-color:#b3d9ff;
+}
+
+#contactInfoContainer {
+  background-color:#4da6ff;
+}
 
 
 
-/*#coltest1 {
+
+
+
+#coltest1 {
   border: 5px solid gray;
 }
 #coltest2 {
   border: 5px solid deeppink;
-}*/
+}
