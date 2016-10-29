@@ -28,6 +28,10 @@ div {
   padding-top: 50px;
 }
 
+.containerBump {
+  margin-top: 75px;
+}
+
 #welcomeContainer {
   background-color:#b3d9ff;
   text-align: center;
@@ -46,8 +50,6 @@ div {
   background-color:#b3d9ff;
 }
 
-
-
 .skillBar {
   height: 20px;
 }
@@ -56,8 +58,16 @@ div {
   background-color:#66b3ff;
 }
 
-#contactInfoContainer {
+#workContainer {
   background-color:#b3d9ff;
+}
+
+.screenshot {
+  text-align: center;
+}
+
+#contactInfoContainer {
+  background-color:#66b3ff;
 }
 
 
