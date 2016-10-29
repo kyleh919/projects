@@ -46,6 +46,12 @@ div {
   background-color:#b3d9ff;
 }
 
+
+
+.skillBar {
+  height: 20px;
+}
+
 #experienceContainer {
   background-color:#66b3ff;
 }
