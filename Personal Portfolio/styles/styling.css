@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 div {
@@ -14,7 +15,8 @@ div {
   margin-top: 12px;
   margin-right: 16px;
   font-size: 18px;
-  color: #999999;
+  /*color: #999999;*/
+  color: white;
 }
 
 .section {
@@ -37,19 +39,19 @@ div {
 }
 
 #aboutMeContainer {
-  background-color:#4da6ff;
+  background-color:#66b3ff;
 }
 
-.aboutMe {
-  margin: 225px 0px 0px 0px;
-}
-
-#experienceContainer {
+#skillsContainer {
   background-color:#b3d9ff;
 }
 
+#experienceContainer {
+  background-color:#66b3ff;
+}
+
 #contactInfoContainer {
-  background-color:#4da6ff;
+  background-color:#b3d9ff;
 }
 
 
