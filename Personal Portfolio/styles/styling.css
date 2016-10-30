@@ -46,6 +46,10 @@ div {
   background-color:#66b3ff;
 }
 
+#aboutMeContainer p {
+  margin-top: 50px;
+}
+
 #skillsContainer {
   background-color:#b3d9ff;
 }
