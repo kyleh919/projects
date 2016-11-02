@@ -3,10 +3,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-div {
-    
-}
-
 #navBar {
   margin-bottom: 0px;
 }
@@ -88,15 +84,4 @@ div {
 
 #poweredByLink {
   color: white;
-}
-
-
-#coltest1 {
-  border: 5px solid gray;
-}
-#coltest2 {
-  border: 5px solid deeppink;
-}
-#coltest3 {
-  border: 5px solid yellow;
 }
