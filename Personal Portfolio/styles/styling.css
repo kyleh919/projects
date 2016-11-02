@@ -70,13 +70,25 @@ div {
   text-align: center;
 }
 
-#contactInfoContainer {
+#contactContainer {
   background-color:#66b3ff;
 }
 
+.social {
+  color: white;
+  margin-top: 10px;
+  margin-right: 20px;
+}
 
+#poweredBy {
+  color: white;
+  margin-top: 15px;
+  margin-right: 20px;
+}
 
-
+#poweredByLink {
+  color: white;
+}
 
 
 #coltest1 {

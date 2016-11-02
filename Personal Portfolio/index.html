@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--includes css library-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        
+        <!--includes css libraries-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
         <!--includes local css file-->
         <link rel="stylesheet" type="text/css" href="styles/styling.css">
     
@@ -42,7 +43,7 @@
                         <li><a href="#skillsContainer">Skills</a></li>
                         <li><a href="#experienceContainer">Experience</a></li>
                         <li><a href="#workContainer">Work</a></li>
-                        <li><a href="#contactInfoContainer">Contact Info</a></li>
+                        <li><a href="#contactContainer">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,9 +63,8 @@ my picture will enter the skills section -->
             <div class="section container-fluid" id="aboutMeContainer">
                 <h2 class="containerHeader">About Me</h2>
 
-                <div class="row" id="coltest1">
-                    <div class="col-sm-8" id="coltest2">
-
+                <div class="row">
+                    <div class="col-sm-8">
                         <!--Currently working at BAE Systems, Inc. as a software engineer. My passions include full stack development,
                             user interfaces, product design, and seamless user experience. I love how user interfaces assist people in
                             achieving goals and have an interest in the design process.
@@ -80,7 +80,7 @@ my picture will enter the skills section -->
                             I developed this portfolio to expand my skillset and gather experience in web development.
                          </p>
                     </div>
-                    <div class="col-sm-4" id="coltest3">
+                    <div class="col-sm-4">
                         <img src="images/kyleGraduation.jpg" class="img-responsive img-rounded" alt="Headshot of Kyle">
                     </div>
                 </div>
@@ -262,13 +262,59 @@ to the left or right of the image to open the link... should only be on the imag
             </div>
              <!--end work section -->
 
+<!-- TODO: Want to add a full section for contact info with:
+-icons to social media profiles
+-a direct message section to send me a message from the site to my email
+            Contact info section
+            <div class="section container-fluid" id="contactContainer">
+                <h1 class="containerHeader">Contact</h1>
+                
+                badges for social media connection
+                <div id="coltest1">
+                    <a href="https://www.linkedin.com/in/kylehunter09" target="_blank">
+                        <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                    </a>
 
-            <!--Contact info section-->
-            <div class="section container-fluid" id="contactInfoContainer">
-                <h1 class="containerHeader">Contact Info</h1>
+                    <a href="https://github.com/kyleh919" target="_blank">
+                        <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="mailto:kyle.hunter91@gmail.com">
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+
+                text field input for name, email address, text, plus send button to my email
+                <div>
+
+                </div>
+-->
             </div>
              <!--end contact info section -->
         
         </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                
+                <a href="https://www.linkedin.com/in/kylehunter09" target="_blank">
+                    <i class="fa fa-linkedin-square fa-2x social" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://github.com/kyleh919" target="_blank">
+                    <i class="fa fa-github fa-2x social" aria-hidden="true"></i>
+                </a>
+
+                <a href="mailto:kyle.hunter91@gmail.com">
+                    <i class="fa fa-envelope fa-2x social" aria-hidden="true"></i>
+                </a>
+
+                <p class="pull-right" id="poweredBy">Created using <a href="http://getbootstrap.com" id="poweredByLink">Bootstrap</a>!</p>
+
+            </div>
+        </nav>
+
+
     </body>
 </html>
