@@ -408,3 +408,39 @@ function getIndexToIns(arr, num) {
 }
  
 getIndexToIns([2, 5, 10], 15);
+
+/*
+One of the simplest and most widely known ciphers is a Caesar cipher,
+also known as a shift cipher. In a shift cipher the meanings of the letters
+are shifted by some set amount.
+
+takes a string input and converts it in rot13 form. Only deals with upper case and
+just places non-alphabetic characters back in their place.
+*/
+
+function rot13(str) {
+  
+  var charCode = 0;
+  var newChar = "";
+  var newStr = "";
+  
+  for(var i=0; i<str.length; i++){
+    charCode = str[i].charCodeAt();
+    
+    if((charCode >= 65) && (charCode <= 77)){
+      charCode += 13;
+    }
+    else if((charCode >= 76) && (charCode <= 90)){
+      charCode -= 13;
+    }
+    
+    newChar = String.fromCharCode(charCode);
+    
+    newStr += newChar;
+  }
+  
+  return newStr;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
