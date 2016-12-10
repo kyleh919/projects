@@ -1,0 +1,12 @@
+body{
+    background: lightgreen;
+}
+
+#quoteBox{
+    background: lightskyblue;
+
+    margin-top: 100px;
+
+    height: 400px;
+    width: 500px;
+}
