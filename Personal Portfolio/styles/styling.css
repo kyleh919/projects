@@ -63,6 +63,10 @@ body {
 }
 
 .screenshot {
+   height: 350px
+}
+
+.screenshotCaption {
   text-align: center;
 }
 
