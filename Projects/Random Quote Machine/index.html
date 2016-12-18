@@ -4,7 +4,8 @@
     
     <!--external css libraries-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto" rel="stylesheet">
+
     <!--custom css files-->
     <link rel="stylesheet" href="styles/styling.css">
 
@@ -17,17 +18,19 @@
 </html>
 
 <body>
-    
-    <div class="container-fluid" id="quoteBox">
-        <p id="quote"></p>
-        <p id="author"></p>
+    <div id="box">
+        <div id="quoteBox">
+            <p id="quote"></p>
+            <p id="author"></p>
 
-        <button id="newQuote">New Quote</button>
+            <button id="newQuote">New Quote</button>
 
-        <button id="tweetQuote">
-            <!-- https://twitter.com/intent/tweet?hashtags=demo&url=https%3A%2F%2Fexample.com -->
-            <a id="tweetLink" class="twitter-share-button" href="https://twitter.com/intent/tweet" target="blank">Tweet</a>
-        </button>
+            <button id="tweetQuote">
+                <a id="tweetLink" class="twitter-share-button" href="https://twitter.com/intent/tweet" target="blank">Tweet</a>
+            </button>
+        </div>
+        <div id="credit">
+            <p id="creditText">Created by <a href="https://www.linkedin.com/in/kylehunter09" target="_blank">Kyle Hunter</a></p>
+        </div>
     </div>
-
 </body>

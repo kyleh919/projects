@@ -1,12 +1,60 @@
-body{
-    background: lightgreen;
+body {
+    transition-duration: 0.8s;
 }
 
-#quoteBox{
-    background: lightskyblue;
+button {
+    background: #e6e6e6;
+}
 
-    margin-top: 100px;
+#box {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 
-    height: 400px;
-    width: 500px;
+#quoteBox {
+    background: #ffffff;
+    margin: auto;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    max-width: 500px;
+
+    border-radius: 12px;
+}
+
+#quote {
+    font-size: 24px;
+    font-family: 'Courgette', cursive;
+}
+
+#author {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#newQuote, #tweetQuote {
+    font-size: 15px;
+    width: 90px;
+    margin: 25px 25px 5px 25px;
+    padding: 5px 0px 5px 0px;
+    border: 1px solid;
+}
+
+#newQuote:focus, #tweetQuote:focus {
+    outline: none;
+}
+
+#tweetLink {
+    color: black;
+    text-decoration: none;
+}
+
+#tweetLink:link, #tweetLink:visited, #tweetLink:hover, #tweetLink:active {
+    color: black;
+    text-decoration: none;
+}
+
+#credit {
+    margin-top: 10px;
+    text-align: center;
 }
