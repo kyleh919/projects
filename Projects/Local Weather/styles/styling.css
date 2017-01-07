@@ -1,6 +1,14 @@
+.currentLoc {
+    display: inline-block;
+}
 
+.currentCond {
+    display: inline-block;
+}
 
-
+.currentTemp {
+    display: inline-block;
+}
 
 /* debug */
 .test1 {
