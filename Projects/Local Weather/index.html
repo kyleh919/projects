@@ -4,7 +4,8 @@
     
     <!--external css libraries-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+
     <!--custom css files-->
     <link rel="stylesheet" href="styles/styling.css">
 
@@ -17,19 +18,25 @@
 </html>
 
 <body>
-    <!--<div class="test1"></div>-->
 
-    <p>Local Weather</p>
+    <p id="title">Local Weather</p>
 
     <div>
         <div class="currentLoc">Nearest Location: </div>
         <div class="currentLoc" id="loc"></div>
     </div>
 
+    <img id="condImg"></img>
+
     <div>
         <div class="currentCond">Condition: </div>
         <div class="currentCond" id="cond"></div>
     </div>
+
+    <!--<div>
+        <div class="currentWind">Wind Speed: </div>
+        <div class="currentWind" id="wind"></div>
+    </div>-->
 
     <div>
         <div class="currentTemp">Temperature: </div>
@@ -37,4 +44,6 @@
     </div>
     <button id="fBtn">Fahrenheit</button>
     <button id="cBtn">Celsius</button>
+
+    
 </body>

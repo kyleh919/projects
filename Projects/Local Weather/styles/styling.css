@@ -1,5 +1,19 @@
+body {
+    /*background-image: url(http://img01.deviantart.net/5bfa/i/2012/283/c/1/a_cloudy_day_by_mimose_stock-d5h3jow.jpg);*/
+    background-color: #ffffff;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#title {
+    font-size: 38px;
+}
+
 .currentLoc {
     display: inline-block;
+}
+
+#condImg {
+    background-color: #ffffff;
 }
 
 .currentCond {
@@ -7,6 +21,10 @@
 }
 
 .currentTemp {
+    display: inline-block;
+}
+
+.currentWind {
     display: inline-block;
 }
 
