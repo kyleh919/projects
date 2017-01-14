@@ -4,7 +4,7 @@
     
     <!--external css libraries-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito" rel="stylesheet">
 
     <!--custom css files-->
     <link rel="stylesheet" href="styles/styling.css">
@@ -19,31 +19,29 @@
 
 <body>
 
-    <p id="title">Local Weather</p>
+    <div id="box">
+        <div id="weatherBox">
+            <p id="title">Local Weather</p>
 
-    <div>
-        <div class="currentLoc">Nearest Location: </div>
-        <div class="currentLoc" id="loc"></div>
+            <p id="locFind" class="weather">Determining your nearest location...</p>
+
+            <p id="alert"><i>Reminder: In order to load the local weather you must allow your browser to use your current location.</i></p>
+
+            <div class="hide weather">
+                <div id="loc"></div>
+
+                <img id="condImg"></img>
+
+                <div id="cond"></div>
+
+                <div id="temp"></div>
+            
+                <button id="btn">Celsius</button>
+            </div>
+        </div>
+
+        <div id="credit">
+            Created by <a href="https://www.linkedin.com/in/kylehunter09" target="_blank">Kyle Hunter</a>
+        </div>
     </div>
-
-    <img id="condImg"></img>
-
-    <div>
-        <div class="currentCond">Condition: </div>
-        <div class="currentCond" id="cond"></div>
-    </div>
-
-    <!--<div>
-        <div class="currentWind">Wind Speed: </div>
-        <div class="currentWind" id="wind"></div>
-    </div>-->
-
-    <div>
-        <div class="currentTemp">Temperature: </div>
-        <div class="currentTemp" id="temp"></div>
-    </div>
-    <button id="fBtn">Fahrenheit</button>
-    <button id="cBtn">Celsius</button>
-
-    
 </body>

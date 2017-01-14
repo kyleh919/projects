@@ -1,34 +1,73 @@
 body {
-    /*background-image: url(http://img01.deviantart.net/5bfa/i/2012/283/c/1/a_cloudy_day_by_mimose_stock-d5h3jow.jpg);*/
+    background-color: #99ccff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#box {
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+#weatherBox {
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    max-width: 500px;
     background-color: #ffffff;
-    font-family: 'PT Sans Narrow', sans-serif;
+    border: 3px black solid;
 }
 
 #title {
-    font-size: 38px;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.currentLoc {
-    display: inline-block;
+.weather {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+#alert {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+#loc {
+    margin-bottom: -5px;
+}
+
+#cond, #temp {
+    margin-bottom: 15px;
 }
 
 #condImg {
     background-color: #ffffff;
+    height: 75px;
 }
 
-.currentCond {
-    display: inline-block;
+#btn {
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    background-color: #a6d8a8;
+    border: 2px solid #000000;
 }
 
-.currentTemp {
-    display: inline-block;
-}
-
-.currentWind {
-    display: inline-block;
-}
-
-/* debug */
-.test1 {
-    border: 1px red solid;
+#credit {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 190px;
+    background-color: #ffffff;
+    border: 3px black solid;
+    font-family: 'Nunito', sans-serif;
 }
