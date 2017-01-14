@@ -64,7 +64,8 @@ body {
 }
 
 .screenshot {
-   height: 350px
+   height: 350px;
+   width: 710px;
 }
 
 .screenshotCaption {
