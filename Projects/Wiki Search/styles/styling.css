@@ -1,0 +1,33 @@
+.hide {
+    display: none;
+}
+
+#searchInput {
+    width: 60%;
+}
+
+
+
+/* debug */
+.test1{
+    border: 2px solid red;
+}
+
+.test2{
+    border: 2px solid blue;
+
+    display: block;
+}
+
+.test3{
+    border: 2px solid green;
+    display: block;
+}
+
+.test4{
+    border: 2px solid gray;
+}
+
+.test5{
+    border: 2px solid deeppink;
+}
