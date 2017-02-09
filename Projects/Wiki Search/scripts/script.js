@@ -27,62 +27,109 @@ https://en.wikipedia.org/wiki/Special:Random
 
 var wurl = ""
 
-$(document).ready(function(){
-    
-    $("#search").click(function(){
+function dispResults(json) {
+    // console.log(json);
 
-        $("#page1").addClass("hide");
-        $("#page2").removeClass("hide");
+    var NUM_QUERY_RESULTS = json.query.search.length;
+    var searchResults = json.query.search;
+    var index, currentTitle, resultsDiv, wikiLink, linebreak;
 
-    });
-    
+    for(index=0; index < NUM_QUERY_RESULTS; index++) {
+        currentTitle = searchResults[index].title;
+        // console.log(currentTitle);
 
-    $("#closeBtn").click(function(){
+        /* this creates an anchor element for the wiki link of each query result. the href and target 
+        attributes are set accordingly and then the anchor element is added to the query results div.
+        additionally, a line break is added to seperate each link */
+        wikiLink = document.createElement('a');
+        wikiLink.setAttribute('href',"https://en.wikipedia.org/wiki/"+currentTitle);
+        wikiLink.setAttribute('target',"_blank");
+        wikiLink.innerText = currentTitle;
+        resultsDiv = document.getElementById("queryResults");
+        resultsDiv.appendChild(wikiLink);
+
+        linebreak = document.createElement('br');
+        // resultsDiv = document.getElementById("queryResults");
+        resultsDiv.appendChild(linebreak);
+
+    }
+
+}
+
+function search(input, jsonUrl) {
+
+    if(input == "") {
+        alert("You must enter text to search prior to clicking the search button!");
+    }
+    else {
+        $.getJSON(jsonUrl, function(json) {
+            dispResults(json);
+        });
 
         $("#page2").addClass("hide");
+        $("#page3").removeClass("hide");
+    }
+}
+
+
+$(document).ready(function() {
+    
+    // clicking the user input search on page 1 to query wikipedia
+    // page 1 -> page 2
+    $("#search").click(function() {
+        $("#page1").addClass("hide");
+        $("#page2").removeClass("hide");
+    });
+    
+    // clicking the close button on page 2, which brings you to page 1
+    // page 2 -> page 1
+    $("#closeBtn").click(function() {
+        $("#page2").addClass("hide");
         $("#page1").removeClass("hide");
-
-
     });
 
-
-        
-    $("#searchBtn").click(function(){
+    // if the search button is clicked, perform a search on the text within the input field
+    // page 2 -> page 3
+    $("#searchBtn").click(function() {
 
         var userInput = $("#searchInput").val();
         var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srprop=timestamp&srlimit=12&callback=?";
 
-        if(userInput == ""){
-            alert("You must enter text to search prior to clicking the search button!");
-        }
-        else{
-
-            $("#page2").addClass("hide");
-            $("#page3").removeClass("hide");
-
-            $.getJSON(wurl, function(json){
-                console.log(json);
-            });
-
-        }
+        search(userInput, wurl);
         
-
-
     });
 
+    // if the users keystroke is enter after typing in the searchbar, perform a search on the text within the input field
+    // page 2 -> page 3
+    $("#searchInput").on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            var userInput = $("#searchInput").val();
+            var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srprop=timestamp&srlimit=12&callback=?";
 
-    $("#backBtn").click(function(){
+            search(userInput, wurl);
+        }
+    });
+
+    $("#backBtn").click(function() {
 
         $("#page3").addClass("hide");
         $("#page2").removeClass("hide");
 
+        // empties the div of it's children to remove the query result links
+        $("#queryResults").empty();
+
     });
 
 
-    $("#homeBtn").click(function(){
+    $("#homeBtn").click(function() {
 
         $("#page3").addClass("hide");
         $("#page1").removeClass("hide");
+
+        // empties the div of it's children to remove the query result links
+        $("#queryResults").empty();
+        // clears out the previous search input
+        $("#searchInput").val("");
 
     });
 

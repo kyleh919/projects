@@ -1,5 +1,5 @@
 <html>
-    <title>Local Weather</title>
+    <title>Wikipedia Search</title>
     <meta charset="utf-8">
     
     <!--external css libraries-->
@@ -17,62 +17,67 @@
 
 </html>
 
+<!--
+links to images:
+back: https://cdn2.iconfinder.com/data/icons/arrows-and-universal-actions-icon-set/256/arrow_left-128.png
+home: https://cdn1.iconfinder.com/data/icons/random-crafticons/48/misc-_Home_-128.png
+close: https://cdn2.iconfinder.com/data/icons/arrows-and-universal-actions-icon-set/256/cancel-128.png
+search: https://cdn3.iconfinder.com/data/icons/musthave/128/Search.png
+-->
+
 <body>
     <div id="page1">
-        <h1 class="test1">Wikipedia Viewer!</h1>
+        <h1>Wikipedia Viewer!</h1>
         
-        <div class="test2">
-            <button id="search">Let me search for something on Wikipedia...</button>
-        </div>
+        <div class="page1ContentBox">
+            <div class="page1Content">
+                <button id="search">Let me search for a page on Wikipedia...</button>
+            </div>
 
-        <div class="test3">
-            OR
-        </div>
-        
-        <div class="test4">
-            <!--<button id="rand"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wiki!</a></button>-->
-            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Show me a random Wiki page!</a>
+            <div class="page1Content">
+                OR
+            </div>
+            
+            <div class="page1Content">
+                <!--<button id="rand"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wiki!</a></button>-->
+                <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Show me a random Wiki page!</a>
+            </div>
         </div>
     </div>
 
 
     <div class="hide" id="page2">
-        <div class="test1">
-            <button id="closeBtn">
-                <img src="Images/close.png"></img>
+        <div class="header">
+            <button class="btn" id="closeBtn">
+                <img class="img" src="Images/close.png"></img>
+                <!--<img class="img" src="https://cdn2.iconfinder.com/data/icons/arrows-and-universal-actions-icon-set/256/cancel-128.png"></img>-->
             </button>
         </div>
 
-        <div class="test2">
-            <input id="searchInput" type="text" name="wikiSearch" placeholder="Enter text here and click the search button!">
-            <input id="searchBtn" type="image" src="Images/search.png" alt="Submit" width="48" height="48">
+        <div class="page2ContentBox">
+            <input id="searchInput" type="text" name="wikiSearch" placeholder="Enter text to search...">
+            <button class="btn" id="closeBtn">
+                <img id="searchBtn" class="img" src="Images/search.png"></img>
+                <!--<img id="searchBtn" class="img" src="https://cdn3.iconfinder.com/data/icons/musthave/128/Search.png"></img>-->
+            </button>
         </div>
     </div>
 
 
 
     <div class="hide" id="page3">
-        <div class="test1">
-            <button id="backBtn">
-                <img src="Images/back.png"></img>
+        <div class="header">
+            <button class="btn" id="backBtn">
+                <img class="img" src="Images/back.png"></img>
+                <!--<img class="img" src="https://cdn2.iconfinder.com/data/icons/arrows-and-universal-actions-icon-set/256/arrow_left-128.png"></img>-->
             </button>
-            <button id="homeBtn">
-                <img src="Images/home.png"></img>
+            <button class="btn" id="homeBtn">
+                <img class="img" src="Images/home.png"></img>
+                <!--<img class="img" src="https://cdn1.iconfinder.com/data/icons/random-crafticons/48/misc-_Home_-128.png"></img>-->
             </button>
         </div>
 
-        <div class="test2">
-
-            Wiki search result link # 1<br>
-            Wiki search result link # 2<br>
-            Wiki search result link # 3<br>
-            Wiki search result link # 4<br>
-            Wiki search result link # 5<br>
-            Wiki search result link # 6<br>
-            Wiki search result link # 7<br>
-            Wiki search result link # 8<br>
-            Wiki search result link # 9<br>
-            Wiki search result link # 10
+        <div class="test2" id="queryResults">
 
         </div>
 

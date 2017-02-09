@@ -1,9 +1,53 @@
+h1 {
+    font-family: 'Droid Serif', serif;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
 .hide {
     display: none;
 }
 
+.page1ContentBox {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.page1Content {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+#search {
+
+}
+
+.page2ContentBox {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color: Transparent;
+    border: none;
+    outline: none;
+}
+
+.img {
+    height: 40px;
+}
+
 #searchInput {
     width: 60%;
+}
+
+#searchBtn {
+    /*height: 5px;*/
+}
+
+.header {
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 
