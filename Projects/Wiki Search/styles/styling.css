@@ -22,6 +22,10 @@ h1 {
 
 }
 
+#search:hover {
+ cursor:pointer;
+}
+
 .page2ContentBox {
     text-align: center;
     margin-top: 50px;
@@ -39,6 +43,7 @@ h1 {
 
 #searchInput {
     width: 60%;
+    font-size: 16px;
 }
 
 #searchBtn {
@@ -48,6 +53,23 @@ h1 {
 .header {
     margin-top: 15px;
     margin-left: 15px;
+    margin-bottom: 75px;
+}
+
+#resultsContainer {
+    border: 2px solid red;
+}
+
+#queryResults {
+    border: 2px solid blue;
+    height: 350px;
+    overflow-y: scroll;
+    margin: 0px 20px 0px 20px;
+}
+
+.queryLinks {
+    font-size: 22px;
+    margin-left: 10px;
 }
 
 
