@@ -19,9 +19,9 @@ http://stackoverflow.com/questions/2381642/returning-data-from-wikipedia-using-a
 http://www.9bitstudios.com/2014/03/getting-data-from-the-wikipedia-api-using-jquery/
 *provided a useful ajax call
 
-
-https://en.wikipedia.org/w/api.php?format=jsonfm&action=query&generator=search&gsrnamespace=0&gsrsearch=test&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max
-https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srprop=sectionsnippet&srlimit=12&callback=?
+old wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srlimit=12&callback=?";
+new wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + input + "&gsrlimit=12&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
+=> this provides the extract/brief intro to each page that can be displayed
 
 ----------
 
@@ -29,44 +29,47 @@ https://en.wikipedia.org/wiki/Special:Random
 
 */
 
+// var wurl = ""
 
-/* currently trying to implement new search method by setting wurl to a new method. Changes the format of the returned JSON */
-
-
-var wurl = ""
+function getURL(input) {
+    return "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + input + "&gsrlimit=15&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
+}
 
 function dispResults(json) {
     console.log(json);
 
-    var NUM_QUERY_RESULTS = json.query.search.length;
-    // var NUM_QUERY_RESULTS = json.query.pages.length;
-    console.log(NUM_QUERY_RESULTS);
-    var searchResults = json.query.search;
-    var index, currentTitle, currDiv, divStyle, addDiv, resultsDiv, wikiLink, linebreak;
+    var results = json.query.pages;
+    var index = 0;
+    var pageInfo, title, currDiv, divStyle, addDiv, resultsDiv, wikiLink, lineBreak, extract;
 
-    for(index=0; index < NUM_QUERY_RESULTS; index++) {
-        currentTitle = searchResults[index].title;
-        // console.log(currentTitle);
+    console.log(results);
+
+    for(var page in results) {
+        console.log(page);
+
+        index++;
+        pageInfo = results[page];
+        console.log(pageInfo);
+
+        title = results[page].title;
 
         /* this creates an anchor element for the wiki link of each query result. the href and target 
         attributes are set accordingly and then the anchor element is added to the query results div.
         additionally, a line break is added to seperate each link */
         currDiv = "linksDivs"+index;
         divStyle = "background-color: coral; margin-bottom: 5px;";
-        
+
         addDiv = document.createElement('div');
-        addDiv.setAttribute('id',currDiv);
-        addDiv.setAttribute('style',divStyle);
-        // addDiv.innerText = "fun";
+        addDiv.setAttribute('id', currDiv);
+        addDiv.setAttribute('style', divStyle);
         resultsDiv = document.getElementById("queryResults");
         resultsDiv.appendChild(addDiv);
 
-
         wikiLink = document.createElement('a');
-        wikiLink.setAttribute('href',"https://en.wikipedia.org/wiki/"+currentTitle);
+        wikiLink.setAttribute('href',"https://en.wikipedia.org/wiki/"+title);
         wikiLink.setAttribute('target',"_blank");
         wikiLink.setAttribute('class',"queryLinks");
-        wikiLink.innerText = currentTitle;
+        wikiLink.innerText = title;
         // resultsDiv = document.getElementById("queryResults");
         resultsDiv = document.getElementById(currDiv);
         resultsDiv.appendChild(wikiLink);
@@ -87,10 +90,10 @@ function search(input, jsonUrl) {
     else {
         $.getJSON(jsonUrl, function(json) {
             dispResults(json);
-        });
 
-        $("#page2").addClass("hide");
-        $("#page3").removeClass("hide");
+            $("#page2").addClass("hide");
+            $("#page3").removeClass("hide");
+        });
     }
 }
 
@@ -116,9 +119,8 @@ $(document).ready(function() {
     $("#searchBtn").click(function() {
 
         var userInput = $("#searchInput").val();
-        var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srlimit=12&callback=?";
-        // var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + userInput + "&gsrlimit=10&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
-        
+        var wurl = getURL(userInput);
+
         search(userInput, wurl);
         
     });
@@ -128,9 +130,7 @@ $(document).ready(function() {
     $("#searchInput").on('keyup', function (e) {
         if (e.keyCode == 13) {
             var userInput = $("#searchInput").val();
-            var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&list=search&srsearch=" + userInput + "&srwhat=text&srlimit=12&callback=?";
-            // var wurl = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + userInput + "&gsrlimit=10&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
-
+            var wurl = getURL(userInput);
 
             search(userInput, wurl);
         }
