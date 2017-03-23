@@ -29,29 +29,30 @@ https://en.wikipedia.org/wiki/Special:Random
 
 */
 
-// var wurl = ""
-
 function getURL(input) {
     return "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + input + "&gsrlimit=15&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
 }
 
 function dispResults(json) {
-    console.log(json);
+    // console.log(json);
 
     var results = json.query.pages;
     var index = 0;
-    var pageInfo, title, currDiv, divStyle, addDiv, resultsDiv, wikiLink, lineBreak, extract;
+    var pageInfo, title, extract, currDiv, divStyle, addDiv, resultsDiv, wikiLink, extractPara, lineBreak, extract;
 
-    console.log(results);
+    // console.log(results);
 
     for(var page in results) {
-        console.log(page);
+        // console.log(page);
 
         index++;
         pageInfo = results[page];
-        console.log(pageInfo);
+        // console.log(pageInfo);
 
-        title = results[page].title;
+        title = pageInfo.title;
+        extract = pageInfo.extract;
+        console.log(title);
+        console.log(extract);
 
         /* this creates an anchor element for the wiki link of each query result. the href and target 
         attributes are set accordingly and then the anchor element is added to the query results div.
@@ -70,16 +71,17 @@ function dispResults(json) {
         wikiLink.setAttribute('target',"_blank");
         wikiLink.setAttribute('class',"queryLinks");
         wikiLink.innerText = title;
+
+        extractPara = document.createElement('p');
+        extractPara.setAttribute('class',"extractText");
+        extractPara.innerText = extract;
+
         // resultsDiv = document.getElementById("queryResults");
         resultsDiv = document.getElementById(currDiv);
         resultsDiv.appendChild(wikiLink);
-
-        linebreak = document.createElement('br');
-        // resultsDiv = document.getElementById("queryResults");
-        resultsDiv.appendChild(linebreak);
-
+        resultsDiv.appendChild(extractPara);
+        
     }
-
 }
 
 function search(input, jsonUrl) {
