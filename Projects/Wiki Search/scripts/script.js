@@ -29,6 +29,9 @@ https://en.wikipedia.org/wiki/Special:Random
 
 */
 
+var flag = false;
+console.log("flag 2 = " + flag);
+
 function getURL(input) {
     return "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrsearch=" + input + "&gsrlimit=15&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&callback=?";
 }
@@ -38,27 +41,31 @@ function dispResults(json) {
 
     var results = json.query.pages;
     var index = 0;
-    var pageInfo, title, extract, currDiv, divStyle, addDiv, resultsDiv, wikiLink, extractPara, lineBreak, extract;
+    var pageInfo, title, extract, currDiv, divStyle, addDiv, resultsDiv,
+        wikiLink, extractPara, lineBreak, extract, numResP, numResPStyle;
 
     // console.log(results);
 
+    // numResDiv = document.createElement('div');
+    // resultsDiv = document.getElementById("displayCnt");
+    // resultsDiv.appendChild(addDiv);
+
     for(var page in results) {
         // console.log(page);
-
         index++;
         pageInfo = results[page];
         // console.log(pageInfo);
 
         title = pageInfo.title;
         extract = pageInfo.extract;
-        console.log(title);
-        console.log(extract);
+        // console.log(title);
+        // console.log(extract);
 
         /* this creates an anchor element for the wiki link of each query result. the href and target 
         attributes are set accordingly and then the anchor element is added to the query results div.
         additionally, a line break is added to seperate each link */
         currDiv = "linksDivs"+index;
-        divStyle = "background-color: coral; margin-bottom: 5px;";
+        divStyle = "border: 2px solid lightgrey; margin: 10px;";// background-color: coral;";
 
         addDiv = document.createElement('div');
         addDiv.setAttribute('id', currDiv);
@@ -66,11 +73,14 @@ function dispResults(json) {
         resultsDiv = document.getElementById("queryResults");
         resultsDiv.appendChild(addDiv);
 
+        wikiLinkPara = document.createElement('p');
         wikiLink = document.createElement('a');
         wikiLink.setAttribute('href',"https://en.wikipedia.org/wiki/"+title);
         wikiLink.setAttribute('target',"_blank");
         wikiLink.setAttribute('class',"queryLinks");
         wikiLink.innerText = title;
+        wikiLinkPara.appendChild(wikiLink);
+        wikiLinkPara.setAttribute('class',"wikiLinkPara");
 
         extractPara = document.createElement('p');
         extractPara.setAttribute('class',"extractText");
@@ -78,14 +88,15 @@ function dispResults(json) {
 
         // resultsDiv = document.getElementById("queryResults");
         resultsDiv = document.getElementById(currDiv);
-        resultsDiv.appendChild(wikiLink);
+        resultsDiv.appendChild(wikiLinkPara);
         resultsDiv.appendChild(extractPara);
-        
     }
+
+    numResP = document.getElementById('displayCnt');
+    numResP.innerText = "Displaying " + index + " results...";
 }
 
 function search(input, jsonUrl) {
-
     if(input == "") {
         alert("You must enter text to search prior to clicking the search button!");
     }
@@ -95,10 +106,11 @@ function search(input, jsonUrl) {
 
             $("#page2").addClass("hide");
             $("#page3").removeClass("hide");
+            
+            flag = false;
         });
     }
 }
-
 
 $(document).ready(function() {
     
@@ -119,38 +131,38 @@ $(document).ready(function() {
     // if the search button is clicked, perform a search on the text within the input field
     // page 2 -> page 3
     $("#searchBtn").click(function() {
+        if(flag === false) {
+            var userInput = $("#searchInput").val();
+            var wurl = getURL(userInput);
 
-        var userInput = $("#searchInput").val();
-        var wurl = getURL(userInput);
-
-        search(userInput, wurl);
-        
+            flag = true;
+            search(userInput, wurl);
+        }
     });
 
     // if the users keystroke is enter after typing in the searchbar, perform a search on the text within the input field
     // page 2 -> page 3
     $("#searchInput").on('keyup', function (e) {
-        if (e.keyCode == 13) {
-            var userInput = $("#searchInput").val();
-            var wurl = getURL(userInput);
+        if(e.keyCode == 13) {
+            if(flag === false) {
+                var userInput = $("#searchInput").val();
+                var wurl = getURL(userInput);
 
-            search(userInput, wurl);
+                flag = true;
+                search(userInput, wurl);
+            }
         }
     });
 
     $("#backBtn").click(function() {
-
         $("#page3").addClass("hide");
         $("#page2").removeClass("hide");
 
         // empties the div of it's children to remove the query result links
         $("#queryResults").empty();
-
     });
 
-
     $("#homeBtn").click(function() {
-
         $("#page3").addClass("hide");
         $("#page1").removeClass("hide");
 
@@ -158,6 +170,5 @@ $(document).ready(function() {
         $("#queryResults").empty();
         // clears out the previous search input
         $("#searchInput").val("");
-
     });
 });

@@ -1,5 +1,8 @@
-h1 {
-    font-family: 'Droid Serif', serif;
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#header {
     text-align: center;
     margin-bottom: 75px;
 }
@@ -18,12 +21,8 @@ h1 {
     font-size: 16px;
 }
 
-#search {
-
-}
-
 #search:hover {
- cursor:pointer;
+ cursor: pointer;
 }
 
 .page2ContentBox {
@@ -46,10 +45,6 @@ h1 {
     font-size: 16px;
 }
 
-#searchBtn {
-    /*height: 5px;*/
-}
-
 .header {
     margin-top: 15px;
     margin-left: 15px;
@@ -62,14 +57,13 @@ h1 {
 }
 
 #resultsContainer {
-    border: 2px solid red;
+    border: 2px solid black;
+    margin: 2%;
 }
 
 #queryResults {
-    border: 2px solid blue;
     height: 350px;
     overflow-y: scroll;
-    margin: 0px 20px 0px 20px;
 }
 
 .queryLinks {
@@ -77,30 +71,10 @@ h1 {
     margin-left: 10px;
 }
 
+.wikiLinkPara {
+    margin-top: 15px;
+}
+
 .extractText {
-    margin-bottom: 20px;
-}
-
-/* debug */
-.test1{
-    border: 2px solid red;
-}
-
-.test2{
-    border: 2px solid blue;
-
-    display: block;
-}
-
-.test3{
-    border: 2px solid green;
-    display: block;
-}
-
-.test4{
-    border: 2px solid gray;
-}
-
-.test5{
-    border: 2px solid deeppink;
+    margin: 0px 10px 15px 10px; 
 }
