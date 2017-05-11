@@ -1,0 +1,40 @@
+#main {
+	border: 1px red solid;
+    width: 70%;
+	
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+#title-window {
+    background: mediumpurple;
+    text-align: center;
+    
+}
+
+#twitch-logo {
+    height: 50px;
+    width: 150px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#content {
+    background: white;
+}
+
+/****Debug****/
+
+
+#test2 {
+	border: 1px blueviolet solid;
+}
+
+#test3 {
+	border: 1px black solid;
+}
+
+#test4 {
+	border: 1px green solid;
+}
