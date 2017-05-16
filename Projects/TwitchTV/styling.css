@@ -21,7 +21,13 @@
 }
 
 #content {
+    border: 1px black solid;
     background: white;
+}
+
+.content-tiles {
+    border: 1px dodgerblue solid;
+    text-align: center;
 }
 
 /****Debug****/
