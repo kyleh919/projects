@@ -1,0 +1,36 @@
+.wrapper {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fullpage-section {
+    height: 100%;
+    width: 100%;
+}
+
+.section-title {
+    border: 1px saddlebrown dotted;
+    height: 100%;
+}
+
+.section-content {
+    border: 1px mediumblue dotted;
+    height: 100%;
+}
+
+
+/*********** debug ***********/
+#border1 {
+    border: 3px lawngreen solid;
+}
+
+#border2 {
+    border: 3px black solid;
+}
+
+#border3 {
+    border: 3px red solid;
+}
+
