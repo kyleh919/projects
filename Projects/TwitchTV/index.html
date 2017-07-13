@@ -38,13 +38,34 @@
 -->
 
 
+<!--
+Have 2 different events:
+-default display: when user loads page, shows all default users
+-search bar: search result is initially hidden, but when a user
+searches for a twitch user, the default display is hidden and
+the search parameter is entered... if there is no user on twitch for
+the username that has been searched, the following object will be
+returned:
+    {"error":"Not Found","status":404,"message":"User \"freecodecamps\" was not found"}
+    ex. https://wind-bow.glitch.me/twitch-api/users/freecodecamps
+
+
+
+So, from a sw architecture standpoint, I should create the HTML
+divs and layout how I want them, and then based on if the user
+hits search or not I can hide the two different events accordingly.
+
+^This means no HTML has to be added dynamically through JS
+
+-->
+
     <body>
         <div id="main">
             <div id="title-window">
                 <img id="twitch-logo" src="http://logos-download.com/wp-content/uploads/2016/05/Twitch_logo.png">
             </div>
             <div id="content">
-                <div class="container-fluid">
+                <!--<div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-4 content-tiles">
                             hey
@@ -67,7 +88,7 @@
                             test
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </body>
