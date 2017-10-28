@@ -1,0 +1,111 @@
+// example I threw together for practice
+
+class Human {
+   
+   // instance variables
+   private String name;
+   private int age;
+   private String phoneNumber;
+   
+   
+   // constructors
+   public Human(String name) {
+      this(name, 0, name + " does not have a phone number.");
+   }
+   
+   public Human(String name, int age) {
+      this(name, age, name + " does not have a phone number.");
+   }
+   
+   public Human(String name, int age, String phoneNumber) {
+      this.name = name;
+      this.age = age;
+      this.phoneNumber = phoneNumber;
+   }
+   
+   
+   // getters
+   public String getName() {
+      return this.name;
+   }
+   
+   public int getAge() {
+      return this.age;
+   }
+   
+   public String getPhoneNumber() {
+      return this.phoneNumber;
+   }
+   
+   // setters
+   public void setName(String newName) {
+      this.name = newName;
+   }
+   
+   public void setAge(int newAge) {
+      this.age = newAge;
+   }
+   
+   public void setPhoneNumber(String newPhoneNumber) {
+      this.phoneNumber = newPhoneNumber;
+   }
+   
+   // methods
+   public void sayHello() {
+      if(this.phoneNumber.equals(this.name + " does not have a phone number.")) {
+         System.out.println("Hi! My name is " + this.name + " and I am " + this.age
+               + " years old.");
+      }
+      else {
+         System.out.println("Hi! My name is " + this.name + " and I am " + this.age
+               + " years old. Give me a call sometime at " + this.phoneNumber + "!");
+      }
+   }
+   
+   public void info() {
+      StringBuilder info = new StringBuilder();
+      info.append("\n\tName: ").append(this.name)
+         .append("\n\tAge: ").append(this.age)
+         .append("\n\tPhone Number: ").append(this.phoneNumber)
+         .append("\n");
+           
+      System.out.println(info);
+   }
+}
+
+
+
+public class Application
+{
+   public static void main(String[] args)
+   {
+      // using name constructor
+      Human person1 = new Human("Kyle");
+      person1.getName();
+      person1.getAge();
+      person1.getPhoneNumber();
+      person1.info();
+      person1.sayHello();
+      
+      // using name + age constructor
+      Human person2 = new Human("Paul", 5);
+      person2.getName();
+      person2.getAge();
+      person2.getPhoneNumber();
+      person2.info();
+      person2.sayHello();
+      
+      // using name + age + phone number constructor
+      Human person3 = new Human("Ron", 34, "(123) 456-7890");
+      person3.getName();
+      person3.getAge();
+      person3.getPhoneNumber();
+      person3.info();
+      person3.sayHello();
+      
+      // inherits from other class
+      Person inherit = new Person();
+      inherit.speak("Hiya");
+      
+   }
+}

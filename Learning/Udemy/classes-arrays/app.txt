@@ -1,0 +1,140 @@
+/*
+this file provides examples of the following:
+- creating classes
+- creating objects from classes
+- scanner input from the user
+- switch case statements
+- for loops
+- do while loops
+- arrays
+*/
+
+import java.util.Scanner;
+
+
+class Person {
+   // instance variables
+   String name;
+   int age;
+   
+   void printName() {
+      System.out.println("name = " + name);
+   }
+   
+   void printAge() {
+      System.out.println("age = " + age);
+   }
+   
+   void introduction() {
+      System.out.println("My name is " + name + " and I am " + age + " years old!");
+   }
+   
+   int calculateYearsToRetirement() {
+      int yearsLeft = 60 - age;
+      
+      return yearsLeft;
+   }
+   
+   // getters
+   String getName() {
+      return name;
+   }
+   
+   int getAge() {
+      return age;
+   }
+   
+}
+
+
+class PhoneBook {
+   String name;
+   String number;
+   String address;
+}
+
+
+class SportsTeam {
+   String sport;
+   String teamName;
+   int numOfPlayers;
+}
+
+
+
+public class Application
+{
+   public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      
+      System.out.println("What is your name or favorite color?");
+      String userString = input.nextLine();
+      System.out.println("Your string = " + userString);
+   
+      switch(userString){
+      case "Kyle":
+         System.out.println("You typed your name. It is " + userString);
+         break;
+      case "blue":
+         System.out.println("You typed your favorite color. It is " + userString);
+         break;
+      default:
+         System.out.println("Your string is not a desired input...");
+      }
+      
+      System.out.println();
+      
+      int userInt = 0;
+      do {
+         System.out.println("Enter a number... let's see if it equals 5!");
+         userInt = input.nextInt();
+      } while(userInt != 5);
+      
+      System.out.println();
+      
+      int[] intArr1 = new int[2];
+      intArr1[0] = 1;
+      intArr1[1] = 2;
+      System.out.println("intArr1[0] = " + intArr1[0]);
+      System.out.println("intArr1[1] = " + intArr1[1]);
+      
+      String[] strArr1 = new String[2];
+      strArr1[0] = "Hello";
+      strArr1[1] = "World";
+      System.out.println("strArr1[0] = " + strArr1[0]);
+      System.out.println("strArr1[1] = " + strArr1[1]);
+      
+      for(String stringer : strArr1) {
+         System.out.println("stringer = " + stringer);
+      }
+      
+      System.out.println();
+      
+      Person person1 = new Person();
+      person1.name = "Kyle";
+      person1.age = 26;
+      System.out.println("person1.name = " + person1.name);
+      System.out.println("person1.age = " + person1.age);
+      
+      Person person2 = new Person();
+      person2.name = "Debbie";
+      person2.age = 57;
+      System.out.println("person2.name = " + person2.name);
+      System.out.println("person2.age = " + person2.age);
+
+      person1.getName();
+      person2.getName();
+      
+      person1.introduction();
+      person2.introduction();
+      
+      int yearsLeft1 = person1.calculateYearsToRetirement();
+      int yearsLeft2 = person2.calculateYearsToRetirement();
+      System.out.println("yearsLeft1 = " + yearsLeft1);
+      System.out.println("yearsLeft2 = " + yearsLeft2);
+      
+      System.out.println("Person 1 name = " + person1.getName());
+      
+      
+   }
+}

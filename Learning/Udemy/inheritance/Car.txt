@@ -1,0 +1,37 @@
+
+public class Car extends Machine
+{
+   
+   
+   
+   /* (non-Javadoc)
+    * @see Machine#start()
+    */
+   @Override
+   public void start()
+   {
+      System.out.println("\tStarting the car...");
+   }
+   
+   
+
+   /* (non-Javadoc)
+    * @see Machine#stop()
+    */
+   @Override
+   public void stop()
+   {
+      System.out.println("\tStopping the car...");
+   }
+
+
+   public void accelerate() {
+      System.out.println("\tAccelerating...");
+   }
+   
+   public void brake() {
+      System.out.println("\tBraking...");
+   }
+   
+   
+}

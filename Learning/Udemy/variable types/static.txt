@@ -1,0 +1,103 @@
+/*
+this file:
+- displays the use of static variables and their access from other
+methods and objects
+- the use of this keyword
+- the use of multiple constructors with multiple input parameters
+*/
+
+
+class Person {
+   
+   public final static int LUCKY_NUMBER = 9;
+   
+   private String name;
+   private int age;
+   
+   // static variable
+   public static String description;
+   
+   private static int counter = 0;
+   
+   public Person() {
+      this("", 0);
+   }
+   
+   public Person(String name, int age) {
+      this.name = name;
+      this.age = age;
+      
+      counter++;
+      System.out.println("\t\tCurrent Person Count = " + counter);
+   }
+   
+   void speak(String sentence) {
+      System.out.println(sentence);
+   }
+   
+   String getName() {
+      return name;
+   }
+   
+   int getAge() {
+      return age;
+   }
+   
+   void setName(String name) {
+      this.name = name;
+   }
+   
+   void setAge(int newAge) {
+      age = newAge;
+   }
+   
+   // non-static methods CAN use static variables
+   public void printName() {
+      System.out.println(description + ": " + name);
+   }
+   
+   // static methods CANNOT use non-static data
+   public static void printInfo() {
+      System.out.println(description);
+//      System.out.println(name);
+   }
+}
+
+
+public class Test
+{
+
+   public static void main(String[] args)
+   {
+      // static variables and methods have to be called/set on the class itself, not an object of the class
+      Person.description = "Static description!";
+      Person.printInfo();
+      
+      
+      Person kyle = new Person();
+      kyle.speak("Hi, I'm Kyle!");
+
+      kyle.setName("Kyle");
+      kyle.setAge(26);
+      
+      // this does not work because the instance variable name is private
+//      kyle.name = "Paul";
+      
+      
+      System.out.println("My name is " + kyle.getName() + " and I am " + kyle.getAge() + " years old!");
+      
+      
+      // new Person using second constructor
+      Person person2 = new Person("Steven", 19);
+      System.out.println("My name is " + person2.getName() + " and I am " + person2.getAge() + " years old!");
+      
+      // uses 0 param constructor which references the 2 param constructor
+      Person person3 = new Person();
+      System.out.println("My name is " + person3.getName() + " and I am " + person3.getAge() + " years old!");
+      
+      System.out.println(Person.LUCKY_NUMBER);
+      
+      
+   }
+
+}
