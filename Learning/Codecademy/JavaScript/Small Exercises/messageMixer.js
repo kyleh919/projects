@@ -1,0 +1,8 @@
+/* messageMixer.js
+Messaging service that allows you to perform an action on a string of text and
+display the output of that behavior to the console.
+
+Includes many different functions to operate on the string within one file.
+Working to break them up into modules.
+
+*/
