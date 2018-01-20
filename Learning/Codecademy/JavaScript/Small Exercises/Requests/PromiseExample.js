@@ -28,7 +28,28 @@ function expandUrl() {
 
 
 function shortenUrl() {
+  const urlWithKey = url + '?key=' + apiKey;
+  const urlToShorten = $inputField.val();
 
+  fetch(urlWithKey, {
+    method: 'POST',
+    headers: {
+ 			"Content-type": "application/json"
+		},
+    body: JSON.stringify({
+      longUrl: urlToShorten
+    })
+  }).then(function(response) {
+    if(response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  }, function(networkError) {
+    console.log(networkError.message);
+  }).then(function(jsonResponse) {
+    $responseField.append('<p> Your shortened URL is </p><p>' + jsonResponse.id + '</p>');
+return jsonResponse;
+  });
 };
 
 function expand() {
