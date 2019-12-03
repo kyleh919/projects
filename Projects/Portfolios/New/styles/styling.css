@@ -1,0 +1,217 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* elements */
+  h1 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  /* id */
+  #avatarDiv {
+    padding-top: 15px;
+  }
+
+  #title {
+    padding: 10px;
+  }
+
+  #contactBtn {
+    display: none;
+  }
+
+  #socialDiv {
+    padding-top: 5px;
+  }
+
+  #nav {
+    /* padding-bottom: 5px; */
+  }
+
+  /* class */
+  .navBtnDiv {
+    /* padding-top: 8px; */
+    padding-bottom: 12px;
+    
+    display: flex;
+    justify-content: center;
+  }
+
+  .navBtn {
+    font-size: 18px;
+
+    width: 150px;
+    height: 35px;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+#main, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#background {
+  /* The image used */
+  background-image: url("../images/ssc.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* if there is a need for scroll the background image stays */
+  overflow: auto;
+}
+
+.avatar {
+  /* Adds circle style to avatar */
+  border-radius: 50%;
+  
+  height: 200px;
+  width: 200px;
+  
+  /* Ceneters image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* adds a shadow around buttons to look less flat */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#title {
+  text-align: center;
+  color: white;
+
+  /* border: 1px blue solid; */
+}
+
+.navBtn {
+  color: white;
+  background-color: #99d3df;
+  
+  /* adds curved corners to buttons */
+  border: none;
+  border-radius: 3px;
+
+  /* adds a shadow around buttons to look less flat */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  /* adds the hand pointer to the buttons */
+  cursor: pointer;
+}
+
+.navBtn:hover {
+  background-color: #aef0fd;
+}
+
+/* social buttons */
+#socialDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.fa {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 15px;
+  border-radius: 50%;
+
+  /* adds a shadow around buttons to look less flat */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.fa-envelope {
+  padding-top: 8px;
+  background: #052f42;
+  color: white;
+}
+
+.fa-envelope:hover {
+  background: #0d73a3;
+  color: white;
+
+  text-decoration: none;
+}
+
+.fa-linkedin {
+  padding-top: 10px;
+  background: #007bb5;
+  color: white;
+}
+
+.fa-linkedin:hover {
+  background: #0195da;
+  color: white;
+
+  text-decoration: none;
+}
+
+.fa-instagram {
+  padding-top: 10px;
+  background: #125688;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #1977bb;
+  color: white;
+
+  text-decoration: none;
+}
+
+.fa-twitter {
+  padding-top: 10px;
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-twitter:hover {
+  background: rgb(90, 183, 253);
+  color: white;
+
+  text-decoration: none;
+}
+
+
+/* debug */
+#avatarDiv {
+  /* border: 1px blue solid; */
+}
+
+#test1 {
+  border: 1px blue solid;
+}
+
+#test2 {
+  border: 1px black solid;
+}

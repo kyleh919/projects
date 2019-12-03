@@ -1,54 +1,69 @@
 <html>
-    <head>
-        <title>Kyle A. Hunter</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+      <title>Kyle Hunter</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--includes external css libraries-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!--includes css libraries-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" >
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
 
-        <!--includes local css libraries-->
-        <link rel="stylesheet" href="styling.css">
+      <!--includes local css file-->
+      <link rel="stylesheet" type="text/css" href="styles/styling.css">
+  
+      <!--includes jquery libraries-->
 
-        <!--includes external script libraries-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!--includes local script file-->
 
-        <!--includes local script libraries-->
-        <script src="script.js"></script>
+  </head>
 
-    </head>
+  <body id="main">
+    <!-- <div id="background">
+      <div id="test1">
+        <img class="avatar" src="./images/avatar.jpg" alt="Avatar">
+      </div>
+    </div> -->
 
-    <body>
-        <!-- Encompasses all elements of site view -->
-        <div class="site-wrapper">
-
-            <!-- Site Main Content -->
-            <div class="site-main">
-
-                <!-- Header -->
-                <section class="fullpage-section" id="border1">
-                    <div>Header</div>
-                </section>
-
-                <!-- Experience -->
-                <section class="fullpage-section" id="border2">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="section-title col-sm-4">Title</div>
-                            <div class="section-content col-sm-8">Content</div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Contact Info -->
-                <section class="fullpage-section" id="border3">
-                    <div>Contact</div>
-                </section>
-
-            </div>
-            <!-- End Site Main Content-->
+    <div id="background" class="container-fluid">
+      <div class="row">
+        <div id="avatarDiv" class="col-sm">
+          <img class="avatar" src="./images/avatar.jpg" alt="Avatar">
         </div>
-        <!--End Site Wrapper-->
-
-    </body>
+      </div>
+      <div class="row">
+        <div id="title" class="col-sm">
+          <h1><b>KYLE HUNTER</b></h1>
+          <h3>SENIOR SOFTWARE ENGINEER</h3>
+        </div>
+      </div>
+      <div id="nav">
+        <div class="row">
+          <div class="col-sm navBtnDiv">
+            <button class="navBtn">ABOUT</button>
+          </div>
+          <div class="col-sm navBtnDiv">
+              <button class="navBtn">SKILLS</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm navBtnDiv">
+            <button class="navBtn">EXPERIENCE</button>
+          </div>
+          <div id="contactBtn" class="col-sm navBtnDiv">
+              <button class="navBtn">CONTACT</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="socialDiv" class="col-sm">
+          <a href="mailto:kyle.hunter91@gmail.com" class="fa fa-envelope" target="_blank"></a>
+          <a href="https://www.linkedin.com/in/kylehunter09/" class="fa fa-linkedin" target="_blank"></a>
+          <a href="https://www.instagram.com/kyleh919/" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://twitter.com/kyleh919" class="fa fa-twitter" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
